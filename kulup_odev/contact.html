@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<link rel="stylesheet" href="/kulup_odev/css/fontawesome.css">  // Locale File  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> <!--Web Source-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="shortcut icon" href="/images/ybskulüp.png" type="image/x-icon">
+    <title>Yönetim Bilişim Sistemleri Eğitim ve Koordinasyon Kulübü</title>
+</head>
+<body>
+  <section id="header">
+    <div id="container">
+      <div class="row">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light " id="nav-boyut">
+          <div class="col-md-2">
+            <a href="index.html"><img src="/images/ybskulüp.png" alt="yönetim_bilisim_sistemleri" class="logo"></a>
+          </div>
+          <div class="col-md-4"><p class="title-header">Yönetim Bilişim Sistemleri Eğitim ve Koordinasyon Kulübü
+          </p> </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-md-6">
+            <div class="collapse navbar-collapse navbar-text" id="navbarNav">
+              <ul class="navbar-nav ">
+                <li class="nav-item  nav-font ">
+                  <a class="nav-link nav-block " href="index.html">AnaSayfa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="events.html">Etkinliklerimiz</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="width: 81px;" href="aboutUs2.html">Biz Kimiz</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active " href="contact.html" >İletişim</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </nav>
+        </div>
+      </div>
+  </section>
+  
+    <section id="form">
+        <div class="form row"> 
+            <h4 class="contactBaslik">Kulübümüze Katılım İsteğinizi ve Düşüncelerinizi Gönderebilirsiniz</h4>
+        <form action="" class="formIletisim">
+            <fieldset><input type="text" name="" id="isim" placeholder="İsim Soyisim*" required></fieldset>
+            <fieldset><input type="tel" name="" id="textbox" placeholder="Telefon Numaranız*"  maxlength="15" required></fieldset>
+            <fieldset><input type="email" name="" id="ePosta" placeholder="E-Posta*" required></fieldset>
+            <fieldset><select name="" id="fakulte" required onchange="bolumSecim()" aria-labelledby="menu1">
+                <option value="-1">Akademik Biriminiz</option>
+                <option value="0">Eğitim F.</option>
+                <option value="1">İ.İ.B.F.</option>
+                <option value="2">İlahiyat F.</option>
+                <option value="3">İnsan ve Toplum Bilimleri F.</option>
+                <option value="4">Mühendislik F.</option>
+                <option value="5">Sağlık Bilimleri F.</option>
+                <option value="6">Sanat ve Tasarım F.</option>
+                <option value="7">Uygulamalı Bilimler F.</option>
+                <option value="8">BESYO</option>
+                <option value="9">Adalet MYO</option>
+                <option value="10">Aydıntepe MYO</option>
+                <option value="11">Demirözü MYO</option>
+                <option value="12">Sağlık Hizmetleri MYO</option>
+                <option value="13">Sosyal Bilimler MYO</option>
+                <option value="14">Teknik Bilimler MYO</option>
+            </select></fieldset>
+            <fieldset>
+                <select name="" id="mySelect" >
+                    <option value="-1">Lütfen Seçim Yapınız.</option>
+                    
+                </select>
+            </fieldset>
+            <fieldset><input type="number" name="" id="sinif" max="4" min="0" placeholder="Sınıfınızı Seçiniz*" required></fieldset>
+            <fieldset><textarea name="" id="beklenti" cols="30" rows="10" placeholder="Kulüpten Beklentileriniz*" required></textarea></fieldset>
+            
+            <!--<input type="submit" value="Gönder" class="gondert">-->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div id="contactContent"></div>
+                  <button class="gondertt">Kaydet</button>
+              </div>
+      
+          </div>
+            <input type="reset" value="Sıfırla" class="sifirlama">
+        </form>
+        <button id="myBtn" class="gondert" onclick="modalYazdirma()">Gönder</button>
+        
+        
+    </div>
+    </section>
+    <section id="footer">
+      <div id="container">
+        <div class="row">
+          <div class="col-md-6 text-muted"> &copy;  Sosyal Medya Hesaplarımıza Linklerlerden Ulşabilirisiniz.</div>
+          <div class="col-md-6">
+            <ul class="icons">
+              <li class="icon"><a href="#" class="icon-link"><i class="fab fa-instagram fa-lg"></i></a></li>
+              <li class="icon"><a href="#" class="icon-link"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+              <li class="icon"><a href="#" class="icon-link"><i class="fab fa-youtube fa-lg"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> 
+    
+    <script src="/js/bootstrap.js"></script>
+    
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.map"></script>
+    <script src="/js/wow.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+    new WOW().init();
+    </script>
+    <script src="/js/main.js"></script> 
+</body>
+</html>
